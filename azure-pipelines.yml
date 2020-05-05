@@ -37,13 +37,3 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-
-- task: AzureRmWebAppDeployment@4
-  displayName: 'Deploy Azure App Service'
-  inputs:
-    azureSubscription: '$(Parameters.ConnectedServiceName)'
-    appType: webApp
-    WebAppName: '$(Parameters.WebAppName)'
-    deployToSlotOrASE: true
-    ResourceGroupName: Pipeline
-    SlotName: staging
